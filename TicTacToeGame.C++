@@ -10,7 +10,7 @@ HOW TO STORE THE BOARD ?
     * with a 2D Vector or 2D Array 
 
 HOW DO I DISPLAY THE BAORD DIFFERENTLY?
-    *
+    * by trying to findout how to put it in a live server or something
 
 HOW WILL A PLAYERS CHOOSE A MOVE?
 
