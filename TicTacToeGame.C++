@@ -20,36 +20,13 @@ WHEN DOES THE GAME END?
 */
 
 
-void game_board() {
-
-    char game_board[3][3]  = { // 3 rows and 3 columns of 
-
-        {'X', 'O', 'X'},
-        {'O', 'X', ' '},
-        {' ', ' ', 'O'},
-
-    };
 
 
-    for (int i = 0; i < 3; i++) {  // for rows ig, i = row number, 'i = 0' means start at 0 then dont go past 3 (i < 3) then move to the next row (i++)
 
-        for (int j = 0;  j < 3; j++){ // for columns, same thing here. 
-            
-            std::cout << game_board[i][j] << " ";
-        }
-        std::cout << std::endl; // goes to next line for input of row and colum
-        std::cout << "------" << std::endl; // creats a seperator between rows
-        
-
-    }
-    
-
-}
 
 int main() {
 // === BOARD CREATION ===
 
-game_board();
 
 // === TRACK PLAYER ===
 
