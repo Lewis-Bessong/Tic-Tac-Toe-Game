@@ -4,7 +4,6 @@ this project is the first project where I implement using git commands in Vscode
 a step towards learning how to use git commands to improve my Software engineering journey.
 */
 
-
 #include <iostream>
 #include <vector>
 
@@ -12,7 +11,7 @@ using namespace std;
 
 // === BOARD CREATION ===
 
-
+//  Stil confused on how board storing works and how to activate it
 void game_display(const char game_board[3][3]) {
     cout << "\n";
     cout << " " << game_board [0][0] << " " << game_board [0][1] << " " << game_board [0][2] << "\n";
