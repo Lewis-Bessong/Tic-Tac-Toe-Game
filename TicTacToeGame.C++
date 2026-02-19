@@ -1,4 +1,10 @@
-// This game is a guided projected that will be based on the tic tac toe game 
+/*
+This game is a guided project that I was able to make through researching solutions and dictionarys for C++, furthermore,
+this project is the first project where I implement using git commands in Vscode, so every change I make to this code is 
+a step towards learning how to use git commands to improve my Software engineering journey.
+*/
+
+
 #include <iostream>
 #include <vector>
 
