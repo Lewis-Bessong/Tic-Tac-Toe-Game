@@ -11,20 +11,25 @@ using namespace std;
 
 // === BOARD CREATION ===
 
-//  Stil confused on how board storing works and how to activate it
-void game_display(const char game_board[3][3]) {
-    cout << "\n";
-    cout << " " << game_board [0][0] << " " << game_board [0][1] << " " << game_board [0][2] << "\n";
-    cout << " ---|---|---\n";
-    cout << " " << game_board [1][0] << " " << game_board [1][1] << " " << game_board [1][2] << "\n";
-    cout << " ---|---|---\n";
-    cout << " " << game_board [2][0] << " " << game_board [2][1] << " " << game_board [2][2] << "\n";
-    cout << "\n";
-}
 
 int main() {
 
-cout << game_display << endl;   
+// === BOARD CREATION ===
+
+char game_board [3][3] = { 
+    {' ', ' ', ' '},
+    {' ', ' ', ' '},       // <--- Board creation
+    {' ', ' ', ' '},
+};
+
+// printing the game 
+
+cout << "   |   |   " << endl;
+cout << " " << game_board[0][0] << " | " << game_board[0][1] << " | " << game_board[0][2] << endl;
+cout << "___|___|___" << endl;
+cout << " " << game_board[1][0] << " | " << game_board[1][1] << " | " << game_board[2][2] << endl;
+
+
 
 // === TRACK PLAYER ===
 
