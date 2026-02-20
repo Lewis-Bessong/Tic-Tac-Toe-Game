@@ -17,9 +17,9 @@ int main() {
 // === BOARD CREATION ===
 
 char game_board [3][3] = { 
-    {'X', ' ', 'O'},
-    {' ', 'O', ' '},       // <--- Board creation
-    {'X', ' ', 'O'},
+    {' ', ' ', ' '},
+    {' ', ' ', ' '},       // <--- Board creation
+    {' ', ' ', ' '},
 };
 
 // printing the game 
