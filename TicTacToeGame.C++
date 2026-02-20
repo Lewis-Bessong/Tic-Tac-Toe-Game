@@ -34,8 +34,18 @@ cout << " " << game_board[2][0] << " | " << game_board[2][1] << " | " << game_bo
 cout << "   |   |   " << endl;
 
 
-// === TRACK PLAYER ===
+// === TRACK PLAYER === (What does it mean to track a player in C++?) (what ways can u track a player?)
 
+    /*
+    
+    1. using enum for player types (X, O)
+
+    2. using class/struct for Game State
+
+    3. tracking the Player During Gameplay
+
+    */
+   
 // === DISPLAY BOARD EVRY TURN ===
 
 // === PLAYER INPUT ===
