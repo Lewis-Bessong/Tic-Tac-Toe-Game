@@ -35,16 +35,19 @@ cout << "   |   |   " << endl;
 
 
 // === TRACK PLAYER === (What does it mean to track a player in C++?) (what ways can u track a player?)
-
-    /*
     
-    1. using enum for player types (X, O)
+    // 1. using enum for player types (X, O)
+    
+enum level {    //used to give anems to constancts, variables for things that wil never change
+    LOW = 0,
+    MEDIUM, // 1 
+    HIGH // 2 
+}; 
 
-    2. using class/struct for Game State
+    // 2. using class/struct for Game State
 
-    3. tracking the Player During Gameplay
+    // 3. tracking the Player During Gameplay
 
-    */
    
 // === DISPLAY BOARD EVRY TURN ===
 
