@@ -40,11 +40,13 @@ cout << "   |   |   " << endl;
     
 enum level {    //used to give anems to constancts, variables for things that wil never change
     LOW = 0,
-    MEDIUM, // 1 
+    MEDIUM, // 1        // What information belongs to a player?
     HIGH // 2 
 }; 
 
     // 2. using class/struct for Game State
+
+class game // leaving off here, too tired 
 
     // 3. tracking the Player During Gameplay
 
