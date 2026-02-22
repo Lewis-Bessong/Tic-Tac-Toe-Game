@@ -48,5 +48,14 @@ enum class Players { // Storing constant variables for the class of players
 
 };
 
+enum class GameState { // Storing constant variables for the class of Game State
+
+    InProgress, // 0
+    WinnerX, // 1
+    WinnerO, // 2
+    Draw // 3
+
+};
+
 return 0;
 }
