@@ -38,16 +38,21 @@ cout << "   |   |   " << endl;
     
     // 1. using enum for player types (X, O)
     
-enum level {    //used to give anems to constancts, variables for things that wil never change
-    LOW = 0,
-    MEDIUM, // 1        // What information belongs to a player?
-    HIGH // 2 
+enum player_symbols {    // variables for things that wil never change (days of the week, months, colors,)
+    SYMBOL1 = 0,
+    SYMBOL2 = 1       // What information belongs to a player? 
 }; 
 
     // 2. using class/struct for Game State
 
-class game // leaving off here, too tired 
+class game { // user defined data type
+    public:
+        enum player_symbol SYMBOL1  
 
+
+
+};
+     
     // 3. tracking the Player During Gameplay
 
    
