@@ -31,6 +31,15 @@ cout << "   |   |   " << endl;
 cout << " " << game_board[2][0] << " | " << game_board[2][1] << " | " << game_board[2][2] << endl;
 cout << "   |   |   " << endl;
 
+// ==== STORING PLAYER SYMBOL ====
+
+enum class BoardState { // variables of constants that are in a class for state of the object called "game baord"
+    
+    X, // 0 
+    O, // 1
+    EMPTY // 2
+
+};
 
 
 return 0;
