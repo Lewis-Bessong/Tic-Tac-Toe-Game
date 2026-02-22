@@ -31,7 +31,7 @@ cout << "   |   |   " << endl;
 cout << " " << game_board[2][0] << " | " << game_board[2][1] << " | " << game_board[2][2] << endl;
 cout << "   |   |   " << endl;
 
-// ==== STORING PLAYER SYMBOL ====
+// ==== STORING CONST. VARIABLES FOR BOARD ====
 
 enum class BoardState { // variables of constants that are in a class for state of the object called "game baord"
     
@@ -56,6 +56,16 @@ enum class GameState { // Storing constant variables for the class of Game State
     Draw // 3
 
 };
+
+/*
+
+Options for next step: 
+
+1. Initialize Input (Start to figure out how player inputs in board ) 
+
+2. Decide how turns work ( Afer player1 plays then its player2 )
+
+*/
 
 return 0;
 }
