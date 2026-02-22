@@ -41,6 +41,12 @@ enum class BoardState { // variables of constants that are in a class for state 
 
 };
 
+enum class Players { // Storing constant variables for the class of players
+    
+    Player1, // 0 
+    Player2, // 1
+
+};
 
 return 0;
 }
