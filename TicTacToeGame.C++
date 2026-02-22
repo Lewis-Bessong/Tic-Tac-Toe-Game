@@ -9,8 +9,6 @@ a step towards learning how to use git commands to improve my Software engineeri
 
 using namespace std;
 
-// === BOARD CREATION ===
-
 
 int main() {
 
@@ -34,37 +32,6 @@ cout << " " << game_board[2][0] << " | " << game_board[2][1] << " | " << game_bo
 cout << "   |   |   " << endl;
 
 
-// === TRACK PLAYER === (What does it mean to track a player in C++?) (what ways can u track a player?)
-    
-    // 1. using enum for player types (X, O)
-    
-enum player_symbols {    // variables for things that wil never change (days of the week, months, colors,)
-    SYMBOL1 = 0,
-    SYMBOL2 = 1       // What information belongs to a player? 
-}; 
-
-    // 2. using class/struct for Game State
-
-class game { // user defined data type
-    public:
-        enum player_symbol SYMBOL1  
-
-
-
-};
-     
-    // 3. tracking the Player During Gameplay
-
-   
-// === DISPLAY BOARD EVRY TURN ===
-
-// === PLAYER INPUT ===
-
-// === INPUT VALIDATION/LOGIC ===
-
-// === INPUT SYMBOL
-
-// === LOGIC FOR WIN ===
 
 return 0;
 }
