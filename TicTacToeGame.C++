@@ -9,6 +9,14 @@ a step towards learning how to use git commands to improve my Software engineeri
 
 using namespace std;
 
+// === BOARD CREATION ===
+
+char game_board [3][3] = { 
+    {' ', ' ', ' '},
+    {' ', ' ', ' '},       // <--- Board creation
+    {' ', ' ', ' '},
+};
+
 // ==== STORING CONST. VARIABLES FOR BOARD ====
 
 enum class BoardState { // variables of constants that are in a class for state of the object called "game baord"
@@ -29,26 +37,26 @@ enum class Players { // Storing constant variables for the class of players
 enum class GameState { // Storing constant variables for the class of Game State
 
     InProgress, // 0
-    Player1sTurn, // 1
-    Player2sTurn, // 2
-    WinnerX, // 3
-    WinnerO, // 4
-    Draw, // 5
-    GameStart //6
+    WinnerX, // 1
+    WinnerO, // 2
+    Draw, // 3
+    GameStart // 4
 
 };
 
-int main() {
+void ga(){
 
-// === BOARD CREATION ===
+    game_board[0][0] == ; // each board box  represents a number with [0][0] being 1 
 
-char game_board [3][3] = { 
-    {' ', ' ', ' '},
-    {' ', ' ', ' '},       // <--- Board creation
-    {' ', ' ', ' '},
+
 };
+
+int main() { // GAME START
 
 // printing the game 
+cout << "The top left box is 1, the top middle box is 2 and so on, with the bottom right box being 9 \n\n";
+
+
 cout << "   |   |   " << endl;
 cout << " " << game_board[0][0] << " | " << game_board[0][1] << " | " << game_board[0][2] << endl;
 cout << "___|___|___" << endl;
@@ -58,10 +66,11 @@ cout << "___|___|___" << endl;
 cout << "   |   |   " << endl;
 cout << " " << game_board[2][0] << " | " << game_board[2][1] << " | " << game_board[2][2] << endl;
 cout << "   |   |   " << endl;
+cout << "\n" << endl;
 
-// ==== PLAYER TURN TRACKING ====
-
-
+string users_first_input;
+cout << "Box?: "; 
+cin >> users_first_input;
 
 
 /*
