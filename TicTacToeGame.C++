@@ -9,6 +9,34 @@ a step towards learning how to use git commands to improve my Software engineeri
 
 using namespace std;
 
+// ==== STORING CONST. VARIABLES FOR BOARD ====
+
+enum class BoardState { // variables of constants that are in a class for state of the object called "game baord"
+    
+    X, // 0 ( Will be Player 1) 
+    O, // 1 ( Will be player 2)
+    EMPTY // 2
+
+};
+
+enum class Players { // Storing constant variables for the class of players
+    
+    Player1, // 0 (X)
+    Player2, // 1 (O)
+
+};
+
+enum class GameState { // Storing constant variables for the class of Game State
+
+    InProgress, // 0
+    Player1sTurn, // 1
+    Player2sTurn, // 2
+    WinnerX, // 3
+    WinnerO, // 4
+    Draw, // 5
+    GameStart //6
+
+};
 
 int main() {
 
@@ -31,36 +59,7 @@ cout << "   |   |   " << endl;
 cout << " " << game_board[2][0] << " | " << game_board[2][1] << " | " << game_board[2][2] << endl;
 cout << "   |   |   " << endl;
 
-// ==== STORING CONST. VARIABLES FOR BOARD ====
-
-enum class BoardState { // variables of constants that are in a class for state of the object called "game baord"
-    
-    X, // 0 
-    O, // 1
-    EMPTY // 2
-
-};
-
-enum class Players { // Storing constant variables for the class of players
-    
-    Player1, // 0 
-    Player2, // 1
-
-};
-
-enum class GameState { // Storing constant variables for the class of Game State
-
-    InProgress, // 0
-    Player1sTurn, // 1
-    Player2sTurn, // 2
-    WinnerX, // 3
-    WinnerO, // 4
-    Draw // 5
-
-};
-
 // ==== PLAYER TURN TRACKING ====
-
 
 
 
