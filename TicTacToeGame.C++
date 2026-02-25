@@ -9,14 +9,6 @@ a step towards learning how to use git commands to improve my Software engineeri
 
 using namespace std;
 
-// === BOARD CREATION ===
-
-char game_board [3][3] = { 
-    {' ', ' ', ' '},
-    {' ', ' ', ' '},       // <--- Board creation
-    {' ', ' ', ' '},
-};
-
 // ==== STORING CONST. VARIABLES FOR BOARD ====
 
 enum class BoardState { // variables of constants that are in a class for state of the object called "game baord"
@@ -52,6 +44,14 @@ void ga(){
 };
 
 int main() { // GAME START
+
+// === BOARD CREATION ===
+
+char game_board [3][3] = { 
+    {' ', ' ', ' '},
+    {' ', ' ', ' '},       
+    {' ', ' ', ' '},
+};
 
 // printing the game 
 cout << "The top left box is 1, the top middle box is 2 and so on, with the bottom right box being 9 \n\n";
