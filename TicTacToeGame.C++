@@ -49,27 +49,26 @@ char game_board [3][3] = {
 
 //player variable
 const char playerX = 'X';
-const char playerO = 'O';   // <---- Storing players
-char currentplayer = 'X';
+const char playerO = 'O';   // <---- Storing players, 
+char currentplayer = 'playerX';
 
 // printing the game 
-cout << "The top left box is 1, the top middle box is 2 and so on, with the bottom right box being 9 \n\n";
 
+for (int i = 0; i < 10; i++) { //
+    cout << "   |   |   " << endl;
+    cout << " " << game_board[0][0] << " | " << game_board[0][1] << " | " << game_board[0][2] << endl;
+    cout << "___|___|___" << endl;
+    cout << "   |   |   " << endl;
+    cout << " " << game_board[1][0] << " | " << game_board[1][1] << " | " << game_board[1][2] << endl;
+    cout << "___|___|___" << endl;
+    cout << "   |   |   " << endl;
+    cout << " " << game_board[2][0] << " | " << game_board[2][1] << " | " << game_board[2][2] << endl;
+    cout << "   |   |   " << endl;
+    cout << "\n" << endl;
 
-cout << "   |   |   " << endl;
-cout << " " << game_board[0][0] << " | " << game_board[0][1] << " | " << game_board[0][2] << endl;
-cout << "___|___|___" << endl;
-cout << "   |   |   " << endl;
-cout << " " << game_board[1][0] << " | " << game_board[1][1] << " | " << game_board[1][2] << endl;
-cout << "___|___|___" << endl;
-cout << "   |   |   " << endl;
-cout << " " << game_board[2][0] << " | " << game_board[2][1] << " | " << game_board[2][2] << endl;
-cout << "   |   |   " << endl;
-cout << "\n" << endl;
+}
 
-string users_first_input;
-cout << "Box?: "; 
-cin >> users_first_input;
+cout << "Turn to Play: " << currentplayer << endl;
 
 
 /*
