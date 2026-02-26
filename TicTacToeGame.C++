@@ -49,12 +49,12 @@ char game_board [3][3] = {
 
 //player variable
 const char playerX = 'X';
-const char playerO = 'O';   // <---- Storing players, 
+const char playerO = 'O';   // <---- Storing players, (const char) is used to store a single character that cannot be changed 
 char currentplayer = 'playerX';
 
 // printing the game 
 
-for (int i = 0; i < 10; i++) { //
+for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i adds 1 each loop
     cout << "   |   |   " << endl;
     cout << " " << game_board[0][0] << " | " << game_board[0][1] << " | " << game_board[0][2] << endl;
     cout << "___|___|___" << endl;
@@ -65,6 +65,7 @@ for (int i = 0; i < 10; i++) { //
     cout << " " << game_board[2][0] << " | " << game_board[2][1] << " | " << game_board[2][2] << endl;
     cout << "   |   |   " << endl;
     cout << "\n" << endl;
+
 
 }
 
