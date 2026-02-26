@@ -36,12 +36,6 @@ enum class GameState { // Storing constant variables for the class of Game State
 
 };
 
-void ga(){
-
-    game_board[0][0] == ; // each board box  represents a number with [0][0] being 1 
-
-
-};
 
 int main() { // GAME START
 
@@ -52,6 +46,11 @@ char game_board [3][3] = {
     {' ', ' ', ' '},       
     {' ', ' ', ' '},
 };
+
+//player variable
+const char playerX = 'X';
+const char playerO = 'O';   // <---- Storing players
+char currentplayer = 'X';
 
 // printing the game 
 cout << "The top left box is 1, the top middle box is 2 and so on, with the bottom right box being 9 \n\n";
