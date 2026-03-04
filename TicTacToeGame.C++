@@ -80,6 +80,8 @@ Options for next step:
 
 2. Decide how turns work ( Afer player1 plays then its player2 )
 
+3. continue to code consistently
+
 */
 
 return 0;
