@@ -67,20 +67,19 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     cout << "\n" << endl;
 
 
-}
+} 
 
 cout << "Turn to Play: " << currentplayer << endl;
 
 
 /*
 
-Options for next step: 
+Questions for project
 
-1. Initialize Input (Start to figure out how player inputs in board ) 
-
-2. Decide how turns work ( Afer player1 plays then its player2 )
-
-3. continue to code consistently
+1. what variable answers who is playing now
+2. when exactly should that variable change?
+3. what happens if the player makes an invalid move
+4.Does the board change before or after switching turns? 
 
 */
 
