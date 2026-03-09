@@ -22,7 +22,7 @@ char game_board [3][3] = {
 //player variable
 const char playerX = 'X';
 const char playerO = 'O';   // <---- Storing players, (const char) is used to store a single character that cannot be changed 
-char currentplayer = 'playerX';
+char currentplayer = playerX;
  
 int r = -1; // deafult for rows 
 int c = -1; // default for colums
@@ -46,8 +46,8 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     cout << "\nEnter your postition, for r c from 0-2: ";
     cin >> r >> c;
 
-    game_board[r][c] = currentplayer;
-
+    game_board[r][c] == currentplayer; 
+    currentplayer = (currentplayer = playerX) ? playerO : playerX;
     
 }
 
