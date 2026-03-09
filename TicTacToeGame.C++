@@ -9,34 +9,6 @@ a step towards learning how to use git commands to improve my Software engineeri
 
 using namespace std;
 
-// ==== STORING CONST. VARIABLES FOR BOARD ====
-
-enum class BoardState { // variables of constants that are in a class for state of the object called "game baord"
-    
-    X, // 0 ( Will be Player 1) 
-    O, // 1 ( Will be player 2)
-    EMPTY // 2
-
-};
-
-enum class Players { // Storing constant variables for the class of players
-    
-    Player1, // 0 (X)
-    Player2, // 1 (O)
-
-};
-
-enum class GameState { // Storing constant variables for the class of Game State
-
-    InProgress, // 0
-    WinnerX, // 1
-    WinnerO, // 2
-    Draw, // 3
-    GameStart // 4
-
-};
-
-
 int main() { // GAME START
 
 // === BOARD CREATION ===
@@ -51,8 +23,10 @@ char game_board [3][3] = {
 const char playerX = 'X';
 const char playerO = 'O';   // <---- Storing players, (const char) is used to store a single character that cannot be changed 
 char currentplayer = 'playerX';
+ 
 
 // printing the game 
+
 
 for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i adds 1 each loop
     cout << "   |   |   " << endl;
@@ -66,8 +40,8 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     cout << "   |   |   " << endl;
     cout << "\n" << endl;
 
+}
 
-} 
 
 cout << "Turn to Play: " << currentplayer << endl;
 
