@@ -43,24 +43,23 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     cout << "\n" << endl;
 
     cout << "Turn to Play: " << currentplayer << endl;
-    cout << "\nEnter your postition, for r c from 0-2: ";
+    cout << "Enter your postition, for r c from 0-2: ";
     cin >> r >> c;
 
-    game_board[r][c] == currentplayer; 
+    game_board[r][c] = currentplayer; 
     currentplayer = (currentplayer = playerX) ? playerO : playerX;
-    
-}
+} 
+
+
 
 
 /*
+ Task List:
 
-Questions for project
-
-1. what variable answers who is playing now
-2. when exactly should that variable change?
-3. what happens if the player makes an invalid move
-4.Does the board change before or after switching turns? 
-
+ 1. Create saftey feature for overwriting 
+ 2. replay option
+ 3. protection feature
+ 
 */
 
 return 0;
