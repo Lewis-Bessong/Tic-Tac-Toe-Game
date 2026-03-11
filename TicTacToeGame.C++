@@ -69,5 +69,14 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
  
 */
 
+/*
+
+Reminfer list:
+
+1. find way to store variable for game state of baord correctly
+2. after solving voerwriting issue, think of next step for the project.
+
+*/
+
 return 0;
 }
