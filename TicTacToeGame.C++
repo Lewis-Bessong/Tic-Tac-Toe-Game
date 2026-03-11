@@ -9,6 +9,12 @@ a step towards learning how to use git commands to improve my Software engineeri
 
 using namespace std;
 
+const enum BoardState {
+
+    EMPTY,
+    TAKEN
+};
+
 int main() { // GAME START
 
 // === BOARD CREATION ===
@@ -46,7 +52,8 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     cout << "Enter your postition, for r c from 0-2: ";
     cin >> r >> c;
 
-    game_board[r][c] = currentplayer; 
+    game_board[r][c] = currentplayer;
+    game_board[r][c] = GameState::
     currentplayer = (currentplayer = playerX) ? playerO : playerX;
 } 
 
