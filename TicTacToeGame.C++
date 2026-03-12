@@ -16,18 +16,6 @@ enum BoardState { // variables for possible board states
     PlayerO // 2
 };
 
-const int board_size = 3;
-BoardState game_board [board_size][board_size];
-
-void initialzeboard(){ // declaring the defeault baord state as empty                   
-    for (int i = 0; i < board_size; ++i){
-        for ( int j = 0; j < board_size; ++i){
-            game_board[i][j] = BoardState::EMPTY;
-        }
-    }
-
-}
-
 int main() { // GAME START
 
 // === BOARD CREATION ===
@@ -67,8 +55,6 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     game_board[r][c] = currentplayer;
     currentplayer = (currentplayer = playerX) ? playerO : playerX;
 } 
-
-
 
 
 /*
