@@ -74,6 +74,7 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
  1. Create saftey feature for overwriting 
  2. replay option
  3. protection feature
+ 4. arrange code for readability
  
 */
 
