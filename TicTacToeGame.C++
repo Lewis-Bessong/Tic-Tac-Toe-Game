@@ -26,7 +26,6 @@ void initialzeboard(){ // declaring the defeault baord state as empty
         }
     }
 
-
 }
 
 int main() { // GAME START
