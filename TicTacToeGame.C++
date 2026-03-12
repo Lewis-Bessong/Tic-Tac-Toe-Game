@@ -9,10 +9,11 @@ a step towards learning how to use git commands to improve my Software engineeri
 
 using namespace std;
 
-const enum BoardState {
+enum BoardState { // variables for possible board states 
 
     EMPTY,
-    TAKEN
+    PlayerX,
+    PlayerO
 };
 
 int main() { // GAME START
@@ -53,7 +54,6 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     cin >> r >> c;
 
     game_board[r][c] = currentplayer;
-    game_board[r][c] = GameState::
     currentplayer = (currentplayer = playerX) ? playerO : playerX;
 } 
 
