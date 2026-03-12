@@ -16,6 +16,9 @@ enum BoardState { // variables for possible board states
     PlayerO // 2
 };
 
+// Code For declaring state in the game board 
+
+
 int main() { // GAME START
 
 // === BOARD CREATION ===
@@ -25,6 +28,11 @@ char game_board [3][3] = {
     {' ', ' ', ' '},       
     {' ', ' ', ' '},
 };
+
+
+
+
+// Code For declaring state in the game baord
 
 
 //player variable
@@ -51,6 +59,15 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     cout << "Turn to Play: " << currentplayer << endl;
     cout << "Enter your postition, for r c from 0-2: ";
     cin >> r >> c;
+
+    if (game_board[r][c] == ' '){ // if the user entered a row and colum that matched ' ' the
+        game_board[r][c] = currentplayer; // the entered r and c by the player is valid.
+    } else { // if the users position input is taken then 
+        cout << "Invalid move! This sqaure is already taken.\n";
+        cout << "Turn to Play: " << currentplayer << endl; // ask again
+        cout << "Enter your postition, for r c from 0-2: ";
+        cin >> r >> c;
+    }
 
     game_board[r][c] = currentplayer;
     currentplayer = (currentplayer = playerX) ? playerO : playerX;
