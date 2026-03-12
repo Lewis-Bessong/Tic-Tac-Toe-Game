@@ -9,12 +9,25 @@ a step towards learning how to use git commands to improve my Software engineeri
 
 using namespace std;
 
-enum State { // variables for possible board states 
+enum BoardState { // variables for possible board states 
 
     EMPTY, // 0
     PlayerX, // 1
     PlayerO // 2
 };
+
+const int board_size = 3;
+BoardState game_board [board_size][board_size];
+
+void initialzeboard(){ // declaring the defeault baord state as empty                   
+    for (int i = 0; i < board_size; ++i){
+        for ( int j = 0; j < board_size; ++i){
+            game_board[i][j] = BoardState::EMPTY;
+        }
+    }
+
+
+}
 
 int main() { // GAME START
 
@@ -26,20 +39,12 @@ char game_board [3][3] = {
     {' ', ' ', ' '},
 };
 
-class BoardState {
-    public:
-        
-
-
-
-
-}
 
 //player variable
 const char playerX = 'X';
 const char playerO = 'O';   // <---- Storing players, (const char) is used to store a single character that cannot be changed 
 char currentplayer = playerX;
- 
+
 int r = -1; // deafult for rows 
 int c = -1; // default for colums
 
