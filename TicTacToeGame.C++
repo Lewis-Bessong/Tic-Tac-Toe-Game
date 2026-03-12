@@ -11,9 +11,9 @@ using namespace std;
 
 enum State { // variables for possible board states 
 
-    EMPTY,
-    PlayerX,
-    PlayerO
+    EMPTY, // 0
+    PlayerX, // 1
+    PlayerO // 2
 };
 
 int main() { // GAME START
@@ -28,8 +28,7 @@ char game_board [3][3] = {
 
 class BoardState {
     public:
-        State emptyspace = emptyspace;
-        emptyspace = State::EMPTY;
+        
 
 
 
