@@ -30,8 +30,6 @@ char game_board [3][3] = {
 };
 
 
-
-
 // Code For declaring state in the game baord
 
 
@@ -56,40 +54,43 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     cout << "   |   |   " << endl;
     cout << "\n" << endl;
 
-    cout << "Turn to Play: " << currentplayer << endl;
+    cout << "Turn to Play: " << currentplayer << "\n";
     cout << "Enter your postition, for r c from 0-2: ";
     cin >> r >> c;
 
     if (game_board[r][c] == ' '){ // if the user entered a row and colum that matched ' ' the
         game_board[r][c] = currentplayer; // the entered r and c by the player is valid.
+        currentplayer = (currentplayer = playerX) ? playerO : playerX; //
     } else { // if the users position input is taken then 
         cout << "Invalid move! This sqaure is already taken.\n";
         cout << "Turn to Play: " << currentplayer << endl; // ask again
         cout << "Enter your postition, for r c from 0-2: ";
         cin >> r >> c;
+        game_board[r][c] = currentplayer;
+        currentplayer = (currentplayer = playerX) ? playerO : playerX; // Dont know what this fully does
     }
 
-    game_board[r][c] = currentplayer;
-    currentplayer = (currentplayer = playerX) ? playerO : playerX;
 } 
 
 
 /*
  Task List:
 
- 1. Create saftey feature for overwriting 
- 2. replay option
- 3. protection feature
- 4. arrange code for readability
  
+ 2. replay option    
+ 3. protection feature
+ 4. arrange code for readability   (continous)
+ 5. Figure out why after player x and o goes player o goes again 2x.
+
 */
 
 /*
 
-Reminfer list:
-
-1. find way to store variable for game state of baord correctly
-2. after solving voerwriting issue, think of next step for the project.
+Reminder list:
+ 
+1. after solving voerwriting issue, think of next step for the project. (almost done)
+2. have a unecessary enum but will need it for later for player input security.
+3. You still dont know what the turn over function does (last line of the code)
 
 */
 
