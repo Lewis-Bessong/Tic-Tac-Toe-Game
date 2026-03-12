@@ -9,7 +9,7 @@ a step towards learning how to use git commands to improve my Software engineeri
 
 using namespace std;
 
-enum BoardState { // variables for possible board states 
+enum State { // variables for possible board states 
 
     EMPTY,
     PlayerX,
@@ -26,6 +26,16 @@ char game_board [3][3] = {
     {' ', ' ', ' '},
 };
 
+class BoardState {
+    public:
+        State emptyspace = emptyspace;
+        emptyspace = State::EMPTY;
+
+
+
+
+}
+
 //player variable
 const char playerX = 'X';
 const char playerO = 'O';   // <---- Storing players, (const char) is used to store a single character that cannot be changed 
@@ -33,10 +43,6 @@ char currentplayer = playerX;
  
 int r = -1; // deafult for rows 
 int c = -1; // default for colums
-
-BoardState EmptyBoard;
-EmptyBoard = BoardState::EMPTY;
-EmptyBoard = game_board[0][0]
 
 // printing the game 
 for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i adds 1 each loop
