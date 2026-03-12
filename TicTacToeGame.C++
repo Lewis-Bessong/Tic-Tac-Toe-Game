@@ -34,9 +34,11 @@ char currentplayer = playerX;
 int r = -1; // deafult for rows 
 int c = -1; // default for colums
 
+BoardState EmptyBoard;
+EmptyBoard = BoardState::EMPTY;
+EmptyBoard = game_board[0][0]
+
 // printing the game 
-
-
 for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i adds 1 each loop
     cout << "   |   |   " << endl;
     cout << " " << game_board[0][0] << " | " << game_board[0][1] << " | " << game_board[0][2] << endl;
