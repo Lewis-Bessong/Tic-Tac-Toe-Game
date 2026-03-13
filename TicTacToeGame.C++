@@ -58,16 +58,16 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     cout << "Enter your postition, for r c from 0-2: ";
     cin >> r >> c;
 
-    if (game_board[r][c] == ' '){ // if the user entered a row and colum that matched ' ' the
+    if (game_board[r][c] == ' '){ // if the user entered a row and colum that matched ' ' then
         game_board[r][c] = currentplayer; // the entered r and c by the player is valid.
-        currentplayer = (currentplayer = playerX) ? playerO : playerX; //
+        currentplayer = (currentplayer == playerX) ? playerO : playerX; // ternary operator
     } else { // if the users position input is taken then 
-        cout << "Invalid move! This sqaure is already taken.\n";
+        cout << "\nInvalid move! This sqaure is already taken.\n\n";
         cout << "Turn to Play: " << currentplayer << endl; // ask again
         cout << "Enter your postition, for r c from 0-2: ";
         cin >> r >> c;
         game_board[r][c] = currentplayer;
-        currentplayer = (currentplayer == playerX) ? playerO : playerX; // This is a tertiary operator and this is like a if conditional (1. check if current player == x and if it is then[?] the next current player becomes player O if not[:] then current player becomes player X) 
+        currentplayer = (currentplayer == playerX) ? playerO : playerX; // This is a ternary operator and this is like a if conditional (1. check if current player == x and if it is then[?] the next current player becomes player O if not[:] then current player becomes player X) 
     }
 
 } 
@@ -77,10 +77,10 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
  Task List:
 
  
- 2. replay option    
- 3. protection feature
- 4. arrange code for readability   (continous)
- 5. Figure out why after player x and o goes player o goes again 2x.
+ . replay option    
+ . protection feature
+ . arrange code for readability   (continous)
+ . Figure out why after player x and o goes player o goes again 2x.
 
 */
 
@@ -88,9 +88,8 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 
 Reminder list:
  
-1. after solving voerwriting issue, think of next step for the project. (almost done)
-2. have a unecessary enum but will need it for later for player input security.
-3. You still dont know what the turn over function does (last line of the code)
+. after solving voerwriting issue, think of next step for the project. (almost done)
+. have a unecessary enum but will need it for later for player input security.
 
 */
 
