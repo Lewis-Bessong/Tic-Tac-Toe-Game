@@ -76,20 +76,20 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 /*
  Task List:
 
- 
- . replay option    
- . protection feature
- . arrange code for readability   (continous)
- . Figure out why after player x and o goes player o goes again 2x.
+. replay option    
+. invalid input protection feature
+. arrange code for readability   (continous)
+. find out how to make code for checking wins and draws for game. 
+
 
 */
 
-/*
 
+/*
 Reminder list:
  
-. after solving voerwriting issue, think of next step for the project. (almost done)
 . have a unecessary enum but will need it for later for player input security.
+. players have 8 possible ways to win and many ways to draw  
 
 */
 
