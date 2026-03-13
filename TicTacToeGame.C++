@@ -69,8 +69,7 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 . replay option    
 . invalid input protection feature
 . arrange code for readability   (continous)
-. find out how to make code for checking wins and draws for game. 
-
+. find out how to make code for checking wins and draws for game. (Next when i come back)
 
 */
 
@@ -78,7 +77,7 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 /*
 Reminder list:
  
-. have a unecessary enum but will need it for later for player input security.
+. might need enum for checking for wins and draws
 . players have 8 possible ways to win and many ways to draw  
 
 */
