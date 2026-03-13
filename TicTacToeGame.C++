@@ -9,19 +9,9 @@ a step towards learning how to use git commands to improve my Software engineeri
 
 using namespace std;
 
-enum BoardState { // variables for possible board states 
-
-    EMPTY, // 0
-    PlayerX, // 1
-    PlayerO // 2
-};
-
-// Code For declaring state in the game board 
-
-
 int main() { // GAME START
 
-// === BOARD CREATION ===
+// === BOARD AND VARIABLE CREATION ===
 
 char game_board [3][3] = { 
     {' ', ' ', ' '},
@@ -29,17 +19,15 @@ char game_board [3][3] = {
     {' ', ' ', ' '},
 };
 
-
-// Code For declaring state in the game baord
-
-
-// player stored in variables
-const char playerX = 'X';
-const char playerO = 'O';   // <---- Storing players, (const char) is used to store a single character that cannot be changed 
+// Storing players, (const char) is used to store a single character that cannot be changed
+const char playerX = 'X'; // variable for player X (with single character 'X')
+const char playerO = 'O'; // variable for player O (with single character 'O')
 char currentplayer = playerX; 
 
-int r = -1; // deafult for rows 
-int c = -1; // default for colums
+// variables that store the position on the board (r = rows, c = colums) ( the -1 means that its deafult and player hasnt chosen a position yet but replaces it when player inputs their desired position)
+int r = -1;  
+int c = -1; 
+
 
 // printing the game 
 for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i adds 1 each loop
@@ -57,6 +45,8 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     cout << "Turn to Play: " << currentplayer << "\n";
     cout << "Enter your postition, for r c from 0-2: ";
     cin >> r >> c;
+
+// ==== CONDITIONAL FOR GAME/PLAYER INPUT ====
 
     if (game_board[r][c] == ' '){ // if the user entered a row and colum that matched ' ' then
         game_board[r][c] = currentplayer; // the entered r and c by the player is valid.
