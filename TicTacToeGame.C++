@@ -43,7 +43,7 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     cout << "\n" << endl;
 
     cout << "Turn to Play: " << currentplayer << "\n";
-    cout << "Enter your postition, for r c from 0-2: ";
+    cout << "Enter your postition, for row and column from 0-2 (0 meaning the first, 1 being the second, 2 being third): ";
     cin >> r >> c;
 
 // ==== CONDITIONAL FOR GAME/PLAYER INPUT ====
