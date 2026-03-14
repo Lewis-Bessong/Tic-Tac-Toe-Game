@@ -65,12 +65,14 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     class wins { // a class for wins
         public: // members accessible outside this code
             
-            bool check_win() {
+            bool check_win() { // check if true
 
+                // find out how to put logic for checking rows and colums 
             }
 
-            bool check_draw() {
+            bool check_draw() { //check if true 
 
+                //fidn out how to put logic for if baord is filled with no wins
             }
 
         
