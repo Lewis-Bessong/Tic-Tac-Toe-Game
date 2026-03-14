@@ -9,6 +9,19 @@ a step towards learning how to use git commands to improve my Software engineeri
 
 using namespace std;
 
+//Class/Variable for checking 8 possible wins
+
+class wins { // a class for wins
+    public: // members accessible outside this code
+        void check_for_win() { // Memebr function
+
+
+        }
+
+
+};
+
+
 int main() { // GAME START
 
 // === BOARD AND VARIABLE CREATION ===
@@ -69,7 +82,7 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 . replay option    
 . invalid input protection feature
 . arrange code for readability   (continous)
-. find out how to make code for checking wins and draws for game. (Next when i come back)
+. find out how to make code for checking wins and draws for game. (In progress)
 
 */
 
