@@ -6,20 +6,7 @@ a step towards learning how to use git commands to improve my Software engineeri
 
 #include <iostream>
 #include <vector>
-
 using namespace std;
-
-//Class/Variable for checking 8 possible wins
-
-class wins { // a class for wins
-    public: // members accessible outside this code
-        void check_for_win() { // Memebr function
-
-
-        }
-
-
-};
 
 
 int main() { // GAME START
@@ -72,6 +59,22 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
         game_board[r][c] = currentplayer;
         currentplayer = (currentplayer == playerX) ? playerO : playerX; // This is a ternary operator and this is like a if conditional (1. check if current player == x and if it is then[?] the next current player becomes player O if not[:] then current player becomes player X) 
     }
+
+    //Class/Variable for checking 8 possible wins
+
+    class wins { // a class for wins
+        public: // members accessible outside this code
+            
+            bool check_win() {
+
+            }
+
+            bool check_draw() {
+
+            }
+
+        
+    };
 
 } 
 
