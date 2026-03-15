@@ -109,9 +109,19 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
                 }
 
                 //check for third row
+                while (game_board[2][0] && game_board[2][1] && game_board[2][2] != ' ') {
 
+                    if (game_board[2][0] && game_board[2][1] && game_board[2][2] == playerX) {
 
-                
+                        cout << "Player X has Won!" << endl;
+
+                    } else if (game_board[2][0] && game_board[2][1] && game_board[2][2] == playerO) {
+
+                        cout << "Player O has Won!" << endl;
+
+                    }
+                }
+ 
             }
 
             bool check_column_win() {
