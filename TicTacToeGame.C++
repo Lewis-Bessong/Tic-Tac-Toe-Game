@@ -95,8 +95,23 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
                 }
                 
                 //check for second row
-                
+                while (game_board[1][0] && game_board[1][1] && game_board[1][2] != ' ') {
 
+                    if (game_board[1][0] && game_board[1][1] && game_board[1][2] == playerX) {
+
+                        cout << "Player X has Won!" << endl;
+
+                    } else if (game_board[1][0] && game_board[1][1] && game_board[1][2] == playerO) {
+
+                        cout << "Player O has Won!" << endl;
+
+                    }
+                }
+
+                //check for third row
+
+
+                
             }
 
             bool check_column_win() {
