@@ -63,15 +63,40 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     //Class/Variable for checking 8 possible wins
 
     class GameStateCheck { // a class for checking the game state
+
         private: // members not accesible outside this code (this is already stored outside the code)
+
+            char game_board[3][3] = { // 3 x 3 array
+                {' ', ' ', ' '},
+                {' ', ' ', ' '},       
+                {' ', ' ', ' '},
+            };
+
             const char playerX = 'X';
             const char playerO = 'O';
+            char currentplayer = playerX;
 
         public: // members accessible outside this code
             
             bool check_row_win() { // check if true
 
-                //for player 
+                // check for first row
+                while (game_board[0][0] && game_board[0][1] && game_board[0][2] != ' ') {
+
+                    if (game_board[0][0] && game_board[0][1] && game_board[0][2] == playerX) {
+
+                        cout << "Player X has Won!" << endl;
+
+                    } else if (game_board[0][0] && game_board[0][1] && game_board[0][2] == playerO) {
+
+                        cout << "Player O has Won!" << endl;
+
+                    }
+                }
+                
+                //check for second row
+                
+
             }
 
             bool check_column_win() {
