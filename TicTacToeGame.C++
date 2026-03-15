@@ -13,7 +13,7 @@ int main() { // GAME START
 
 // === BOARD AND VARIABLE CREATION ===
 
-char game_board [3][3] = { 
+char game_board [3][3] = { // 3 x 3 array
     {' ', ' ', ' '},
     {' ', ' ', ' '},       
     {' ', ' ', ' '},
@@ -62,19 +62,24 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 
     //Class/Variable for checking 8 possible wins
 
-    class wins { // a class for wins
+    class GameStateCheck { // a class for checking the game state
+        private: // members not accesible outside this code (this is already stored outside the code)
+            const char playerX = 'X';
+            const char playerO = 'O';
+
         public: // members accessible outside this code
             
-            bool check_win() { // check if true
+            bool check_row_win() { // check if true
 
-                // find out how to put logic for checking rows and colums 
+                //for player 
+            }
+
+            bool check_column_win() {
             }
 
             bool check_draw() { //check if true 
-
-                //fidn out how to put logic for if baord is filled with no wins
+                //find out how to put logic for if baord is filled with no wins
             }
-
         
     };
 
