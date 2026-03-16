@@ -81,46 +81,41 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
             bool check_row_win() { // check if true
 
                 // check for first row
-                while (game_board[0][0] && game_board[0][1] && game_board[0][2] != ' ') {
 
-                    if (game_board[0][0] && game_board[0][1] && game_board[0][2] == playerX) {
+                if (game_board[0][0] && game_board[0][1] && game_board[0][2] == playerX) {
 
-                        cout << "Player X has Won!" << endl;
+                    cout << "Player X has Won!" << endl;
 
-                    } else if (game_board[0][0] && game_board[0][1] && game_board[0][2] == playerO) {
+                } else if (game_board[0][0] && game_board[0][1] && game_board[0][2] == playerO) {
 
-                        cout << "Player O has Won!" << endl;
+                    cout << "Player O has Won!" << endl;
 
-                    }
                 }
                 
                 //check for second row
-                while (game_board[1][0] && game_board[1][1] && game_board[1][2] != ' ') {
 
-                    if (game_board[1][0] && game_board[1][1] && game_board[1][2] == playerX) {
+                if (game_board[1][0] && game_board[1][1] && game_board[1][2] == playerX) {
 
-                        cout << "Player X has Won!" << endl;
+                    cout << "Player X has Won!" << endl;
 
-                    } else if (game_board[1][0] && game_board[1][1] && game_board[1][2] == playerO) {
+                } else if (game_board[1][0] && game_board[1][1] && game_board[1][2] == playerO) {
 
-                        cout << "Player O has Won!" << endl;
+                    cout << "Player O has Won!" << endl;
 
-                    }
                 }
+
 
                 //check for third row
-                while (game_board[2][0] && game_board[2][1] && game_board[2][2] != ' ') {
+                if (game_board[2][0] && game_board[2][1] && game_board[2][2] == playerX) {
 
-                    if (game_board[2][0] && game_board[2][1] && game_board[2][2] == playerX) {
+                    cout << "Player X has Won!" << endl;
 
-                        cout << "Player X has Won!" << endl;
+                } else if (game_board[2][0] && game_board[2][1] && game_board[2][2] == playerO) {
 
-                    } else if (game_board[2][0] && game_board[2][1] && game_board[2][2] == playerO) {
+                    cout << "Player O has Won!" << endl;
 
-                        cout << "Player O has Won!" << endl;
-
-                    }
                 }
+                
  
             }
 
@@ -128,7 +123,7 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
             }
 
             bool check_draw() { //check if true 
-                //find out how to put logic for if baord is filled with no wins
+                //find out how to put logic for if board is filled with no wins
             }
         
     };
