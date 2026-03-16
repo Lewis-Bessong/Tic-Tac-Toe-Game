@@ -82,11 +82,11 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 
                 // check for first row
 
-                if (game_board[0][0] && game_board[0][1] && game_board[0][2] == playerX) {
+                if (game_board[0][0] == playerX && game_board[0][1] == playerX && game_board[0][2] == playerX) { // must assign each game board palce to a player instead of &&
 
                     cout << "Player X has Won!" << endl;
 
-                } else if (game_board[0][0] && game_board[0][1] && game_board[0][2] == playerO) {
+                } else if (game_board[0][0] == playerX && game_board[0][1] == playerX && game_board[0][2] == playerO) {
 
                     cout << "Player O has Won!" << endl;
 
