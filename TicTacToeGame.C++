@@ -137,7 +137,7 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 . replay option    
 . invalid input protection feature
 . arrange code for readability   (continous)
-. find out how to make code for checking wins and draws for game. (In progress)
+. match if conditional loops throughout rows and columns (in progress)
 
 */
 
