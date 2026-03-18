@@ -50,9 +50,6 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 
     if (game_board[r][c] == ' '){ // if the user entered a row and colum that matched ' ' then
         game_board[r][c] = currentplayer; // the entered r and c by the player is valid.
-        check_row_win();
-        check_column_win();
-        check_diagnol_win;
         currentplayer = (currentplayer == playerX) ? playerO : playerX; // ternary operator
     } else { // if the users position input is taken then 
         cout << "\nInvalid move! This sqaure is already taken.\n\n";
@@ -81,100 +78,6 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 
         public: // members accessible outside this code
             
-            void check_row_win() {
-
-                if (game_board[0][0] == playerX && game_board[0][1] == playerX && game_board[0][2] == playerX) { // must assign each game board palce to a player instead of &&
-
-                    cout << "Player X has Won!" << endl;
-
-                } else if (game_board[0][0] == playerO && game_board[2][1] == playerO && game_board[2][2] == playerO) {
-
-                    cout << "Player O has Won!" << endl;
-
-                }
-
-                if (game_board[1][0] == playerX && game_board[1][1] == playerX && game_board[1][2] == playerX) {
-
-                    cout << "Player X has Won!" << endl;
-
-                } else if (game_board[1][0] == playerO && game_board[1][1] == playerO && game_board[1][2] == playerO) {
-
-                    cout << "Player O has Won!" << endl;
-
-                }
-
-                if (game_board[2][0] == playerX && game_board[2][1] == playerX && game_board[2][2] == playerX) {
-
-                    cout << "Player X has Won!" << endl;
-
-                } else if (game_board[2][0] == playerO && game_board[0][1] == playerO && game_board[0][2] == playerO) {
-
-                    cout << "Player O has Won!" << endl;
-
-                }
-
-            }
-
-            void check_column_win () {
-
-                if (game_board[0][0] == playerX && game_board[1][0] == playerX && game_board[2][0] == playerX) { 
-
-                    cout << "Player X has Won!" << endl;
-
-                } else if (game_board[0][0] == playerO && game_board[1][0] == playerO && game_board[2][0] == playerO) {
-
-                    cout << "Player O has Won!" << endl;
-
-                }
-
-                if (game_board[0][1] == playerX && game_board[1][1] == playerX && game_board[2][1] == playerX) { 
-
-                    cout << "Player X has Won!" << endl;
-
-                } else if (game_board[0][1] == playerO && game_board[1][1] == playerO && game_board[2][1] == playerO) {
-
-                    cout << "Player O has Won!" << endl;
-
-                }
-
-                if (game_board[0][2] == playerX && game_board[1][2] == playerX && game_board[2][2] == playerX) { // must assign each game board palce to a player instead of &&
-
-                    cout << "Player X has Won!" << endl;
-
-                } else if (game_board[0][2] == playerO && game_board[1][2] == playerO && game_board[2][2] == playerO) {
-
-                    cout << "Player O has Won!" << endl;
-
-                }
-
-            }
-            
-            bool check_diagnol_win() {
-
-                // "\" check
-                if (game_board[0][0] == playerX && game_board[1][1] == playerX && game_board[2][2] == playerX) { // must assign each game board palce to a player instead of &&
-
-                    cout << "Player X has Won!" << endl;
-
-                } else if (game_board[0][0] == playerO && game_board[1][1] == playerO && game_board[2][2] == playerO) {
-
-                    cout << "Player O has Won!" << endl;
-
-                }
-
-                //  "/" check
-                if (game_board[0][2] == playerX && game_board[1][1] == playerX && game_board[2][0] == playerX) { // must assign each game board palce to a player instead of &&
-
-                    cout << "Player X has Won!" << endl;
-
-                } else if (game_board[0][2] == playerO && game_board[1][1] == playerO && game_board[2][0] == playerO) {
-
-                    cout << "Player O has Won!" << endl;
-
-                }
-
-                return true;
-            }
 
     };
 
