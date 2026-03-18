@@ -111,21 +111,13 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 
     //Class/Variable for checking 8 possible wins
 
-    void RowCheckWin(){
-
-        if (game_board[0][0] == playerX && game_board[0][1] == playerX && game_board[0][2] == playerX){
-
-            cout << "Player X has Won" << endl;
-
-        } else if (game_board[0][0] == playerO && game_board[0][1] == playerO && game_board[0][2] == playerO){
-
-            cout << "Player O has won" << endl;
-
-        }
-
+    for (i = 0; i < 3; i++) {
+        if (game_board[i][0] == playerX &&
+            game_board[i][1] == playerX &&
+            game_board[1][2] == playerX) {
+                return true;
+            }
     }
-
-    RowCheckWin();
 } 
 
 
