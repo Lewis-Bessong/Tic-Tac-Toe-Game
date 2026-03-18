@@ -72,6 +72,23 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
             return true;
         } 
     } 
+
+    //check for columns
+    for (i = 0; i < 3; i++) {
+        if (game_board[0][i] == playerX && game_board[1][i] == playerX && game_board[2][i] == playerX) {
+
+            cout << "\nPlayer X has won." << endl;
+            return true;
+
+        } else if (game_board[0][i] == playerO && game_board[1][i] == playerO && game_board[2][i] == playerO) {
+
+            cout << "\nPlayer O has won." << endl;
+            return true;
+
+        }
+
+    }
+
 }
 
 
