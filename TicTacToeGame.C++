@@ -111,14 +111,19 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 
     //Class/Variable for checking 8 possible wins
 
+    // check for rows 
     for (i = 0; i < 3; i++) {
         if (game_board[i][0] == playerX &&
             game_board[i][1] == playerX &&
-            game_board[1][2] == playerX) {
+            game_board[i][2] == playerX) {
                 return true;
-            }
-    }
+            } else if(game_board[i][0] == playerO &&
+                      game_board[i][1] == playerO &&
+                      game_board[i][2] == playerO) {
+                      return true;
+                    } 
 } 
+
 
 
 /*
