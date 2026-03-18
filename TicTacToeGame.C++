@@ -89,9 +89,9 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 
     }
 
-    //check for diagnols
+    //check for diagnols (No loop for diagnols because its specific)
 
-    // for top left to bottom right (No loop for diagnols because its specific)
+    // for top left to bottom right
     if (game_board[0][0] == playerX && game_board[1][1] == playerX && game_board[2][2] == playerX) {
 
         cout << "\nPlayer X has won." << endl;
@@ -105,6 +105,17 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     }
 
     // for top right to bottom left box
+    if (game_board[0][2] == playerX && game_board[1][1] == playerX && game_board[2][0] == playerX) {
+
+        cout << "\nPlayer X has won." << endl;
+        return true;
+
+    } else if (game_board[0][2] == playerO && game_board[1][1] == playerO && game_board[2][0] == playerO) {
+
+        cout << "\nPlayer O has won." << endl;
+        return true;
+
+    }
 }
 
 
@@ -114,14 +125,15 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 
 . replay option    
 . invalid input protection feature
-. arrange code for readability   (continous)
-. match if conditional loops throughout rows and columns (in progress)
+. Find out how to print the game again after user wins so its 
+proven that user has won.
+
 
 
 Reminder list:
  
-. might need enum for checking for wins and draws
-. players have 8 possible ways to win and many ways to draw  
+. always make sure code is readable
+. need to tell the computer when its full. 
 
 */
 
