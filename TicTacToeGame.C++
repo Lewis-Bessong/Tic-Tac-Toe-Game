@@ -8,55 +8,6 @@ a step towards learning how to use git commands to improve my Software engineeri
 #include <vector>
 using namespace std;
 
-/*
-
-class GameWinCheck { // a class for checking the game state for winning
-
-    private: // members not accesible outside this code (this is already stored outside the code)
-
-        char game_board[3][3] = { // 3 x 3 array
-            {' ', ' ', ' '},
-            {' ', ' ', ' '},       
-            {' ', ' ', ' '},
-        };
-
-        const char playerX = 'X';
-        const char playerO = 'O';
-        char currentplayer = playerX;
-
-    public: // members accessible outside this code
-        
-        void row_win_check() {
-
-            if (game_board[0][0] == playerX && game_board[0][1] == playerX && game_board[0][2] == playerX){
-
-                cout << "Player X has Won" << endl;
-
-            } else if (game_board[0][0] == playerO && game_board[0][1] == playerO && game_board[0][2] == playerO){
-
-                cout << "Player O has won" << endl;
-
-            }
-        }
-
-};
-
-*/
-
-void RowCheckWin(){
-
-    if (game_board[0][0] == playerX && game_board[0][1] == playerX && game_board[0][2] == playerX){
-
-        cout << "Player X has Won" << endl;
-
-    } else if (game_board[0][0] == playerO && game_board[0][1] == playerO && game_board[0][2] == playerO){
-
-        cout << "Player O has won" << endl;
-
-    }
-
-} 
-
 
 int main() { // GAME START
 
@@ -95,7 +46,7 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     cout << "Enter your postition, for row and column from 0-2 (0 meaning the first, 1 being the second, 2 being third): ";
     cin >> r >> c;
 
-// ==== CONDITIONAL FOR GAME/PLAYER INPUT ====
+    // ==== CONDITIONAL FOR GAME/PLAYER INPUT ====
 
     if (game_board[r][c] == ' '){ // if the user entered a row and colum that matched ' ' then
         game_board[r][c] = currentplayer; // the entered r and c by the player is valid.
@@ -112,17 +63,16 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     //Class/Variable for checking 8 possible wins
 
     // check for rows 
-    for (i = 0; i < 3; i++) {
-        if (game_board[i][0] == playerX &&
-            game_board[i][1] == playerX &&
-            game_board[i][2] == playerX) {
-                return true;
-            } else if(game_board[i][0] == playerO &&
-                      game_board[i][1] == playerO &&
-                      game_board[i][2] == playerO) {
-                      return true;
-                    } 
-} 
+    for (i = 0; i < 3; i++) { // i will loop through rows, starting from 0 will check if player x has filled all rows
+        if (game_board[i][0] == playerX && game_board[i][1] == playerX && game_board[i][2] == playerX) { // player x
+            cout << "\nPlayer X has won." << endl;
+            return true;
+        } else if (game_board[i][0] == playerO && game_board[i][1] == playerO && game_board[i][2] == playerO) { // player o
+            cout << "\nPlayer O has won." << endl;
+            return true;
+        } 
+    } 
+}
 
 
 
@@ -134,10 +84,7 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 . arrange code for readability   (continous)
 . match if conditional loops throughout rows and columns (in progress)
 
-*/
 
-
-/*
 Reminder list:
  
 . might need enum for checking for wins and draws
