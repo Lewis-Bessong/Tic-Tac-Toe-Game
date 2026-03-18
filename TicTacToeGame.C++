@@ -89,6 +89,22 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 
     }
 
+    //check for diagnols
+
+    // for top left to bottom right (No loop for diagnols because its specific)
+    if (game_board[0][0] == playerX && game_board[1][1] == playerX && game_board[2][2] == playerX) {
+
+        cout << "\nPlayer X has won." << endl;
+        return true;
+
+    } else if (game_board[0][0] == playerO && game_board[1][1] == playerO && game_board[2][2] == playerO) {
+
+        cout << "\nPlayer O has won." << endl;
+        return true;
+
+    }
+
+    // for top right to bottom left box
 }
 
 
