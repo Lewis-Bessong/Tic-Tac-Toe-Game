@@ -8,6 +8,55 @@ a step towards learning how to use git commands to improve my Software engineeri
 #include <vector>
 using namespace std;
 
+/*
+
+class GameWinCheck { // a class for checking the game state for winning
+
+    private: // members not accesible outside this code (this is already stored outside the code)
+
+        char game_board[3][3] = { // 3 x 3 array
+            {' ', ' ', ' '},
+            {' ', ' ', ' '},       
+            {' ', ' ', ' '},
+        };
+
+        const char playerX = 'X';
+        const char playerO = 'O';
+        char currentplayer = playerX;
+
+    public: // members accessible outside this code
+        
+        void row_win_check() {
+
+            if (game_board[0][0] == playerX && game_board[0][1] == playerX && game_board[0][2] == playerX){
+
+                cout << "Player X has Won" << endl;
+
+            } else if (game_board[0][0] == playerO && game_board[0][1] == playerO && game_board[0][2] == playerO){
+
+                cout << "Player O has won" << endl;
+
+            }
+        }
+
+};
+
+*/
+
+void RowCheckWin(){
+
+    if (game_board[0][0] == playerX && game_board[0][1] == playerX && game_board[0][2] == playerX){
+
+        cout << "Player X has Won" << endl;
+
+    } else if (game_board[0][0] == playerO && game_board[0][1] == playerO && game_board[0][2] == playerO){
+
+        cout << "Player O has won" << endl;
+
+    }
+
+} 
+
 
 int main() { // GAME START
 
@@ -62,25 +111,21 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 
     //Class/Variable for checking 8 possible wins
 
-    class GameWinCheck { // a class for checking the game state for winning
+    void RowCheckWin(){
 
-        private: // members not accesible outside this code (this is already stored outside the code)
+        if (game_board[0][0] == playerX && game_board[0][1] == playerX && game_board[0][2] == playerX){
 
-            char game_board[3][3] = { // 3 x 3 array
-                {' ', ' ', ' '},
-                {' ', ' ', ' '},       
-                {' ', ' ', ' '},
-            };
+            cout << "Player X has Won" << endl;
 
-            const char playerX = 'X';
-            const char playerO = 'O';
-            char currentplayer = playerX;
+        } else if (game_board[0][0] == playerO && game_board[0][1] == playerO && game_board[0][2] == playerO){
 
-        public: // members accessible outside this code
-            
+            cout << "Player O has won" << endl;
 
-    };
+        }
 
+    }
+
+    RowCheckWin();
 } 
 
 
