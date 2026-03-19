@@ -123,6 +123,8 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 /*
  Task List:
 
+. Need to end game by april 1
+
 . replay option    
 . invalid input protection feature
 . Find out how to print the game again after user wins so its 
