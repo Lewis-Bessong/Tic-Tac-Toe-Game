@@ -60,7 +60,7 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
         currentplayer = (currentplayer == playerX) ? playerO : playerX; // This is a ternary operator and this is like a if conditional (1. check if current player == x and if it is then[?] the next current player becomes player O if not[:] then current player becomes player X) 
     }
 
-    //Class/Variable for checking 8 possible wins
+    // ==== WIN CHECKS FOR PLAYER WINS ====
 
     // check for rows 
     for (i = 0; i < 3; i++) { // i will loop through rows, starting from 0 will check if player x has filled all rows
@@ -76,15 +76,11 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     //check for columns
     for (i = 0; i < 3; i++) {
         if (game_board[0][i] == playerX && game_board[1][i] == playerX && game_board[2][i] == playerX) {
-
             cout << "\nPlayer X has won." << endl;
             return true;
-
         } else if (game_board[0][i] == playerO && game_board[1][i] == playerO && game_board[2][i] == playerO) {
-
             cout << "\nPlayer O has won." << endl;
             return true;
-
         }
 
     }
@@ -93,30 +89,25 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 
     // for top left to bottom right
     if (game_board[0][0] == playerX && game_board[1][1] == playerX && game_board[2][2] == playerX) {
-
         cout << "\nPlayer X has won." << endl;
         return true;
-
     } else if (game_board[0][0] == playerO && game_board[1][1] == playerO && game_board[2][2] == playerO) {
-
         cout << "\nPlayer O has won." << endl;
         return true;
-
     }
 
     // for top right to bottom left box
     if (game_board[0][2] == playerX && game_board[1][1] == playerX && game_board[2][0] == playerX) {
-
         cout << "\nPlayer X has won." << endl;
         return true;
-
     } else if (game_board[0][2] == playerO && game_board[1][1] == playerO && game_board[2][0] == playerO) {
-
         cout << "\nPlayer O has won." << endl;
         return true;
-
     }
 }
+    // ====  CHECK DRAW WHEN NO WIN ====
+
+    if (game_board 
 
 
 
