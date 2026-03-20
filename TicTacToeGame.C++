@@ -110,7 +110,7 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
    for (int i = 0; i < 3; i++) {
         while (game_board[i][i] =! ' ') {
 
-            if (game_board[i][i] =! playerX || playerO) {
+            if (game_board[i][i] =! playerX && playerO) {
 
                 cout << "Draw. No Win" << endl;
                 return true;
