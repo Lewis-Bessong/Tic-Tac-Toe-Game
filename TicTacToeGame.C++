@@ -60,6 +60,14 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
         currentplayer = (currentplayer == playerX) ? playerO : playerX; // This is a ternary operator and this is like a if conditional (1. check if current player == x and if it is then[?] the next current player becomes player O if not[:] then current player becomes player X) 
     }
 
+    // ====  CHECK DRAW WHEN NO WIN ====
+
+    for (i = 0; i < 3; i++) {
+        if (game_board[i][0] =! )
+
+    }
+
+
     // ==== WIN CHECKS FOR PLAYER WINS ====
 
     // check for rows 
@@ -105,10 +113,9 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
         return true;
     }
 }
-    // ====  CHECK DRAW WHEN NO WIN ====
-
 
     
+
 
 
 /*
