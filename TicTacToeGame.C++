@@ -63,10 +63,12 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     // ====  CHECK DRAW WHEN NO WIN ====
 
     for (i = 0; i < 3; i++) {
-        if (game_board[i][0] =! )
+        if (game_board[i][0]){
+            
+        }
 
+    
     }
-
 
     // ==== WIN CHECKS FOR PLAYER WINS ====
 
@@ -134,6 +136,7 @@ Reminder list:
  
 . always make sure code is readable
 . need to tell the computer when its full. 
+. need to finish by tommorrow
 
 */
 
