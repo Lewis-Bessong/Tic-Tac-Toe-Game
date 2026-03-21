@@ -8,7 +8,7 @@ a step towards learning how to use git commands to improve my Software engineeri
 #include <vector>
 using namespace std;
 
-void drawBoard(char game_board[3][3]) {
+void drawBoard(char game_board[3][3]) { // unseen untill called in the main (used for better accesibility)
     cout << "\n";
     cout << "   |   |   " << endl;
     cout << " " << game_board[0][0] << " | " << game_board[0][1] << " | " << game_board[0][2] << endl;
@@ -81,14 +81,9 @@ char game_board [3][3] = { // 3 x 3 array
 
 
 // Storing players, (const char) is used to store a single character that cannot be changed
-const char Empty = ' ';
-const char playerX = 'X'; // variable for player X (with single character 'X')
-const char playerO = 'O'; // variable for player O (with single character 'O')
-char currentplayer = playerX; 
 
-// variables that store the position on the board (r = rows, c = colums) ( the -1 means that its deafult and player hasnt chosen a position yet but replaces it when player inputs their desired position)
-int r = -1;  
-int c = -1; 
+char currentplayer = 'X'; 
+int r, c;
 
 
 // printing the game
@@ -100,63 +95,33 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     cout << "Enter your postition, for row and column from 0-2 (0 meaning the first, 1 being the second, 2 being third): ";
     cin >> r >> c;
 
-    // ==== CONDITIONAL FOR GAME/PLAYER INPUT ====
 
-    if (game_board[r][c] == ' '){ // if the user entered a row and colum that matched ' ' then
-        game_board[r][c] = currentplayer; // the entered r and c by the player is valid. 
+    //check move
+    if (game_board[r][c] != ' '){ // checks if spot is already taken
         cout << "\nInvalid move!\n\n";
-        i--;
-        continue;
+        i--; // retry turn, goes back one step in loop
+        continue; //skips the rest of the loop and restarts
     }
 
-    if (checkwin()) {
-        
-    }
+    // place move
+    game_board[r][c] = currentplayer; // the entered r and c by the player is valid.
 
-    // ==== WIN CHECKS FOR PLAYER WINS ====
-
-    // check for rows 
-
-
-        // ====  CHECK DRAW WHEN NO WIN ====
-    
-
-    if (checkwin()) {
+    //check win
+    if (checkwin(game_board)) { // calls if someone has won
+        drawBoard(game_board);  // prints
         cout << "\nPlayer " << currentplayer << " has won.\n";
-        break;
+        break; // used to stop action of loop
     }
 
-    if (isBoardFull()) {
-        cout << "\nIt's a draw.\n";
-        break;
+    //check draw
+    if (isBoardFull(game_board)) { // checks if all spots are filled
+        drawBoard(game_board);
+        cout << "\nIts a draw.\n";
+        break; // end game
     }
 
+    currentplayer = (currentplayer == 'X') ? 'O' : 'X'; // ternary operator (short if else)
 }
-
-    
-
-
-
-/*
- Task List:
-
-. Need to end game by april 1
-
-. replay option    
-. invalid input protection feature
-. Find out how to print the game again after user wins so its 
-proven that user has won.
-
-
-
-Reminder list:
- 
-. always make sure code is readable
-. need to tell the computer when its full. 
-. need to finish by tommorrow
-
-. after finishing project need to improve for java, must be done today.
-*/
 
 return 0;
 }
