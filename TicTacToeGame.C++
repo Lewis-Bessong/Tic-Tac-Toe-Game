@@ -108,7 +108,7 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 
     //check win
     if (checkwin(game_board)) { // calls if someone has won
-        drawBoard(game_board);  // prints
+        drawBoard(game_board);  // prints board
         cout << "\nPlayer " << currentplayer << " has won.\n";
         break; // used to stop action of loop
     }
