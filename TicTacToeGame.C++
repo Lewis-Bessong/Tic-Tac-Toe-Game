@@ -138,6 +138,7 @@ Reminder list:
 . need to tell the computer when its full. 
 . need to finish by tommorrow
 
+. after finishing project need to improve for java, must be done today.
 */
 
 return 0;
