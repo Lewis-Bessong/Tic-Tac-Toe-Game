@@ -62,13 +62,26 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 
     // ====  CHECK DRAW WHEN NO WIN ====
 
-    for (i = 0; i < 3; i++) {
-        if (game_board[i][0]){
-            
+    bool IsBoardFull(char game_board[3][3]); { // 
+
+        for (int r = 0; r < 3; r++){ // loop through rows
+
+            for (int c = 0; r < 3; r++){ // loop through columns 
+
+                if (game_board[3][3] == ' ') { // return flase if board has ' '
+
+                    return false;
+                }
+            }
         }
 
-    
+        return true;
     }
+
+    if (IsBoardFull(game_board[3][3]))
+        
+    
+    
 
     // ==== WIN CHECKS FOR PLAYER WINS ====
 
