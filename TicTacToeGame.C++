@@ -9,6 +9,7 @@ a step towards learning how to use git commands to improve my Software engineeri
 using namespace std;
 
 
+
 int main() { // GAME START
 
 // === BOARD AND VARIABLE CREATION ===
@@ -19,7 +20,10 @@ char game_board [3][3] = { // 3 x 3 array
     {' ', ' ', ' '},
 };
 
+
+
 // Storing players, (const char) is used to store a single character that cannot be changed
+const char Empty = ' ';
 const char playerX = 'X'; // variable for player X (with single character 'X')
 const char playerO = 'O'; // variable for player O (with single character 'O')
 char currentplayer = playerX; 
@@ -60,38 +64,15 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
         currentplayer = (currentplayer == playerX) ? playerO : playerX; // This is a ternary operator and this is like a if conditional (1. check if current player == x and if it is then[?] the next current player becomes player O if not[:] then current player becomes player X) 
     }
 
-    // ====  CHECK DRAW WHEN NO WIN ====
-
-    bool IsBoardFull(char game_board[3][3]); { // 
-
-        for (int r = 0; r < 3; r++){ // loop through rows
-
-            for (int c = 0; r < 3; r++){ // loop through columns 
-
-                if (game_board[3][3] == ' ') { // return flase if board has ' '
-
-                    return false;
-                }
-            }
-        }
-
-        return true;
-    }
-
-    if (IsBoardFull(game_board[3][3]))
-        
-    
-    
-
     // ==== WIN CHECKS FOR PLAYER WINS ====
 
     // check for rows 
     for (i = 0; i < 3; i++) { // i will loop through rows, starting from 0 will check if player x has filled all rows
         if (game_board[i][0] == playerX && game_board[i][1] == playerX && game_board[i][2] == playerX) { // player x
-            cout << "\nPlayer X has won." << endl;
+            
             return true;
         } else if (game_board[i][0] == playerO && game_board[i][1] == playerO && game_board[i][2] == playerO) { // player o
-            cout << "\nPlayer O has won." << endl;
+           
             return true;
         } 
     } 
@@ -99,10 +80,10 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     //check for columns
     for (i = 0; i < 3; i++) {
         if (game_board[0][i] == playerX && game_board[1][i] == playerX && game_board[2][i] == playerX) {
-            cout << "\nPlayer X has won." << endl;
+            
             return true;
         } else if (game_board[0][i] == playerO && game_board[1][i] == playerO && game_board[2][i] == playerO) {
-            cout << "\nPlayer O has won." << endl;
+            
             return true;
         }
 
@@ -112,19 +93,33 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
 
     // for top left to bottom right
     if (game_board[0][0] == playerX && game_board[1][1] == playerX && game_board[2][2] == playerX) {
-        cout << "\nPlayer X has won." << endl;
+        
         return true;
     } else if (game_board[0][0] == playerO && game_board[1][1] == playerO && game_board[2][2] == playerO) {
-        cout << "\nPlayer O has won." << endl;
+        
         return true;
     }
 
     // for top right to bottom left box
     if (game_board[0][2] == playerX && game_board[1][1] == playerX && game_board[2][0] == playerX) {
-        cout << "\nPlayer X has won." << endl;
+        
         return true;
     } else if (game_board[0][2] == playerO && game_board[1][1] == playerO && game_board[2][0] == playerO) {
-        cout << "\nPlayer O has won." << endl;
+    
+        return true;
+    }
+
+    // ====  CHECK DRAW WHEN NO WIN ====
+
+    
+    bool isBoardFull(); {
+        for (int r = 0; r < 3; r++){
+            for (int c = 0; r < 3; r++) {
+                if (game_board[r][c] != 'X' && game_board[r][c] != 'O'){
+                    return false;
+                }
+            }
+        }
         return true;
     }
 }
