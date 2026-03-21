@@ -67,51 +67,54 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     // ==== WIN CHECKS FOR PLAYER WINS ====
 
     // check for rows 
-    for (i = 0; i < 3; i++) { // i will loop through rows, starting from 0 will check if player x has filled all rows
-        if (game_board[i][0] == playerX && game_board[i][1] == playerX && game_board[i][2] == playerX) { // player x
-            
-            return true;
-        } else if (game_board[i][0] == playerO && game_board[i][1] == playerO && game_board[i][2] == playerO) { // player o
-           
-            return true;
-        } 
-    } 
+    bool checkwin(); {
 
-    //check for columns
-    for (i = 0; i < 3; i++) {
-        if (game_board[0][i] == playerX && game_board[1][i] == playerX && game_board[2][i] == playerX) {
+        for (i = 0; i < 3; i++) { // i will loop through rows, starting from 0 will check if player x has filled all rows
+            if (game_board[i][0] == playerX && game_board[i][1] == playerX && game_board[i][2] == playerX) { // player x
             
+                return true;
+            } else if (game_board[i][0] == playerO && game_board[i][1] == playerO && game_board[i][2] == playerO) { // player o
+           
+                return true;
+            } 
+        } 
+
+        //check for columns
+        for (i = 0; i < 3; i++) {
+            if (game_board[0][i] == playerX && game_board[1][i] == playerX && game_board[2][i] == playerX) {
+            
+                return true;
+            } else if (game_board[0][i] == playerO && game_board[1][i] == playerO && game_board[2][i] == playerO) {
+            
+                return true;
+            }
+
+        }
+
+        //check for diagnols (No loop for diagnols because its specific)
+
+        // for top left to bottom right
+        if (game_board[0][0] == playerX && game_board[1][1] == playerX && game_board[2][2] == playerX) {
+        
             return true;
-        } else if (game_board[0][i] == playerO && game_board[1][i] == playerO && game_board[2][i] == playerO) {
-            
+        } else if (game_board[0][0] == playerO && game_board[1][1] == playerO && game_board[2][2] == playerO) {
+        
             return true;
         }
 
-    }
-
-    //check for diagnols (No loop for diagnols because its specific)
-
-    // for top left to bottom right
-    if (game_board[0][0] == playerX && game_board[1][1] == playerX && game_board[2][2] == playerX) {
+       // for top right to bottom left box
+        if (game_board[0][2] == playerX && game_board[1][1] == playerX && game_board[2][0] == playerX) {
         
-        return true;
-    } else if (game_board[0][0] == playerO && game_board[1][1] == playerO && game_board[2][2] == playerO) {
-        
-        return true;
-    }
-
-    // for top right to bottom left box
-    if (game_board[0][2] == playerX && game_board[1][1] == playerX && game_board[2][0] == playerX) {
-        
-        return true;
-    } else if (game_board[0][2] == playerO && game_board[1][1] == playerO && game_board[2][0] == playerO) {
+            return true;
+        } else if (game_board[0][2] == playerO && game_board[1][1] == playerO && game_board[2][0] == playerO) {
     
-        return true;
+            return true;
+        }
+
+        return false;
     }
 
-    // ====  CHECK DRAW WHEN NO WIN ====
-
-    
+        // ====  CHECK DRAW WHEN NO WIN ====
     bool isBoardFull(); {
         for (int r = 0; r < 3; r++){
             for (int c = 0; r < 3; r++) {
@@ -122,6 +125,17 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
         }
         return true;
     }
+
+    if (checkwin()) {
+        cout << "\nPlayer " << currentplayer << " has won.\n";
+        break;
+    }
+
+    if (isBoardFull()) {
+        cout << "\nIt's a draw.\n";
+        break;
+    }
+
 }
 
     
