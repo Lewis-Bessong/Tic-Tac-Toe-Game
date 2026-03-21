@@ -22,47 +22,35 @@ void drawBoard(char game_board[3][3]) {
     cout << "\n" << endl;
 }
 
-bool checkwin() {
+bool checkwin(char game_board[3][3]) {
 
-        for (i = 0; i < 3; i++) { // i will loop through rows, starting from 0 will check if player x has filled all rows
-            if (game_board[i][0] == playerX && game_board[i][1] == playerX && game_board[i][2] == playerX) { // player x
+        // check for rows
+        for (int i = 0; i < 3; i++) { 
+            if (game_board[i][0] != ' ' && game_board[i][0] == game_board[i][1] && game_board[i][1] == game_board[i][2]) { 
             
-                return true;
-            } else if (game_board[i][0] == playerO && game_board[i][1] == playerO && game_board[i][2] == playerO) { // player o
-           
                 return true;
             } 
         } 
 
         //check for columns
-        for (i = 0; i < 3; i++) {
-            if (game_board[0][i] == playerX && game_board[1][i] == playerX && game_board[2][i] == playerX) {
+        for (int i = 0; i < 3; i++) { 
+            if (game_board[0][i] != ' ' && game_board[0][i] == game_board[1][i] && game_board[1][i] == game_board[2][i]) { 
             
                 return true;
-            } else if (game_board[0][i] == playerO && game_board[1][i] == playerO && game_board[2][i] == playerO) {
-            
-                return true;
-            }
-
+            } 
         }
 
         //check for diagnols (No loop for diagnols because its specific)
 
         // for top left to bottom right
-        if (game_board[0][0] == playerX && game_board[1][1] == playerX && game_board[2][2] == playerX) {
-        
-            return true;
-        } else if (game_board[0][0] == playerO && game_board[1][1] == playerO && game_board[2][2] == playerO) {
+        if (game_board[0][0] != ' ' && game_board[0][0] == game_board[1][1] && game_board[1][1] == game_board[2][2]) {
         
             return true;
         }
 
        // for top right to bottom left box
-        if (game_board[0][2] == playerX && game_board[1][1] == playerX && game_board[2][0] == playerX) {
+        if (game_board[0][2] != ' ' && game_board[0][2] == game_board[1][1] && game_board[1][1] == game_board[2][0]) {
         
-            return true;
-        } else if (game_board[0][2] == playerO && game_board[1][1] == playerO && game_board[2][0] == playerO) {
-    
             return true;
         }
 
