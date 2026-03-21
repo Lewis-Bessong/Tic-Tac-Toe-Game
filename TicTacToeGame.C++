@@ -57,10 +57,10 @@ bool checkwin(char game_board[3][3]) {
         return false;
     }
 
-bool isBoardFull() {
-        for (int c = 0; c < 3; c++) {
+bool isBoardFull(char game_board[3][3]) {
+        for (int r = 0; r < 3; r++) {
             for (int c = 0; c < 3; c++) {
-                if (game_board[r][c] != 'X' && game_board[r][c] != 'O') {
+                if (game_board[r][c] == ' ') {
                     return false;
                 }
             }
@@ -92,8 +92,9 @@ int c = -1;
 
 
 // printing the game
-drawBoard();
 for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i adds 1 each loop
+
+    drawBoard(game_board);
 
     cout << "Turn to Play: " << currentplayer << "\n";
     cout << "Enter your postition, for row and column from 0-2 (0 meaning the first, 1 being the second, 2 being third): ";
@@ -102,8 +103,7 @@ for (int i = 0; i < 9; i++) { // i starts as 0, loops until it reaches 9x, i add
     // ==== CONDITIONAL FOR GAME/PLAYER INPUT ====
 
     if (game_board[r][c] == ' '){ // if the user entered a row and colum that matched ' ' then
-        game_board[r][c] = currentplayer; // the entered r and c by the player is valid.
-    } else { // if the users position input is taken then 
+        game_board[r][c] = currentplayer; // the entered r and c by the player is valid. 
         cout << "\nInvalid move!\n\n";
         i--;
         continue;
